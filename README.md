@@ -110,14 +110,19 @@ Learning C++ programming Language
 	（2）首先将是否闰年的标志flag预置为0（非闰年），这样仅当year为闰年时将flag置为1即可。这种处理两种状态值的方法，对优化算法和提高程序可读性非常有效，请读者仔细体会。参考程序如下：
 	     
  ``` c++
-	main()
-	{ int year,flag=0;
-	  printf("Please input the year:");
-	  scanf("%d",&year);
-	  if (year % 4==0)      {if (year % 100 != 0) flag=1;}
-	     else      {if (year%400==0) flag=1; }
-	  if (flag==1)   printf("%d is a leap year.\n",year);
-	       else   printf("%d is not a leap year.\n",year);
+main()
+{ 
+	int year,flag=0;
+	printf("Please input the year:");
+	scanf("%d",&year);
+	if (year % 4==0)
+	{
+		if (year % 100 != 0) flag=1;
+	}
+	else
+	{ if (year%400==0) flag=1; }
+	  if (flag==1) printf("%d is a leap year.\n",year);
+	       else printf("%d is not a leap year.\n",year);
 	}
  ```
  
@@ -137,7 +142,9 @@ Learning C++ programming Language
 	
 23-从键盘上输入`a`,`b`两个数，求这两个数的最大公约数 `r`。在此有如下的要求:
 	 (1) 如果这两个数均为零，没有最大公约数。
+	 
 	 (2) 这里不对负数求最大公约数。
+	 
 	 (3) 如果只有一个数为零，则最大公约数就是另一个数。
 
 
